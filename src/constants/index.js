@@ -1,0 +1,1 @@
+export {default as ROUTEPATHS} from './route-paths.constant'
