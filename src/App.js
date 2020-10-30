@@ -1,8 +1,9 @@
 import React from 'react';
-import ROUTES, { RenderRoutes } from 'routes/routes';
+import routes from 'routes/routes';
+import {RenderRoutes} from 'components'
 
 function App() {
-  return <RenderRoutes routes={ROUTES} />;
+  return <RenderRoutes routes={routes} />;
 }
 
 export default App;
