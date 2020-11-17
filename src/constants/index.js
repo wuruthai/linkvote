@@ -1,1 +1,1 @@
-export {default as ROUTEPATHS} from './route-paths.constant'
+export {default as ROUTE_PATHS} from './route-paths.constant'

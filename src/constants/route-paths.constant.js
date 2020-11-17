@@ -1,6 +1,6 @@
-const ROUTESPATHS = {
+const ROUTE_PATHS = {
   HOME: '/',
   PAGE: '/PAGE'
 }
 
-export default ROUTESPATHS;
+export default ROUTE_PATHS;

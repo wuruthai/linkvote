@@ -1,0 +1,15 @@
+$color-primary: black;
+$color-light: gray;
+$color-secondary: white;
+$color-warning: tomato;
+
+$space-sm: 10px;
+$space-md: 20px;
+$space-lg: 30px;
+
+$border-radius: 8px;
+
+$space-list: ("sm" $space-sm), ("md" $space-md), ("lg" $space-lg);
+$sides: (top, bottom, left, right);
+
+$color-list: ("primary" $color-primary), ("light" $color-light), ("secondary" $color-secondary), ("warning" $color-warning);

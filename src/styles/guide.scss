@@ -1,0 +1,38 @@
+@import "variables";
+
+// create basic css classes for margin-padding
+// example usage margin-bottom-sm or padding-top-lg or padding-md
+@each $space in $space-list {
+  $key: nth($space, 1);
+  $value: nth($space, 2);
+  
+  .margin-#{$key} {
+    margin: $value;
+  }
+  .padding-#{$key} {
+    padding: $value;
+  }
+  @each $side in $sides {
+    .margin-#{$side}-#{$key} {
+      margin-#{$side}: $value;
+    }
+  
+    .p-#{$side}-#{$key} {
+      padding-#{$side}: $value;
+    }
+  }
+}
+
+@each $color in $color-list {
+  $key: nth($color, 1);
+  $value: nth($color, 2);
+
+  .color-#{$key} {
+    color: $value;
+  }
+
+  .background-color-#{$key} {
+    color: $value;
+  }
+}
+
