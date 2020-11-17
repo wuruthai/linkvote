@@ -1,6 +1,6 @@
 class Storage {
   storeData(key, value) {
-loca
+    loca;
   }
 
   async retrieveData(key) {
@@ -13,6 +13,6 @@ loca
   }
 }
 
-const storage = new Storage()
+const storage = new Storage();
 
 export default storage;

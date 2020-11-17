@@ -1,6 +1,6 @@
 const ROUTE_PATHS = {
   HOME: '/',
-  PAGE: '/PAGE'
-}
+  PAGE: '/PAGE',
+};
 
 export default ROUTE_PATHS;

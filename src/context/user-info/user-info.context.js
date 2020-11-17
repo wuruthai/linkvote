@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Storage from '~/utils/storage';
 import { STORAGE_CONST } from '~/constants/storage.const';
 
@@ -34,17 +33,16 @@ export const UserInfoProvider = ({ children }) => {
     getUserInfo();
   }, []);
 
-  return (
-    <UserInfoContext.Provider
-      value={{
-        userInfoState: state,
-        userInfoDispatch: dispatch,
-        userInfoActions: actions,
-      }}
-    >
-      {children}
-    </UserInfoContext.Provider>
-  );
+  return 's';
+  // <UserInfoContext.Provider
+  //   value={{
+  //     userInfoState: state,
+  //     userInfoDispatch: dispatch,
+  //     userInfoActions: actions,
+  //   }}
+  // >
+  //   {children}
+  // </UserInfoContext.Provider>
 };
 
 export const useUserInfo = () => React.useContext(UserInfoContext);

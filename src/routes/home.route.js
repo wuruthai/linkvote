@@ -1,8 +1,10 @@
-const homeRoute =       {
+import { HomePage } from 'pages';
+
+const homeRoute = {
   path: '/',
   key: 'APP_ROOT',
   exact: true,
-  component: () => <h1>App Index</h1>,
-}
+  component: HomePage,
+};
 
-export default homeRoute
+export default homeRoute;

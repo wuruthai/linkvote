@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 const RouteWithSubRoutes = (route) => {
@@ -10,4 +10,4 @@ const RouteWithSubRoutes = (route) => {
     />
   );
 };
-export default RouteWithSubRoutes
+export default RouteWithSubRoutes;
