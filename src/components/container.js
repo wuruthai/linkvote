@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { getClassName } from 'utils';
 
 // align props ===> top , bottom , middle

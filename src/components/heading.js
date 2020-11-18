@@ -1,20 +1,18 @@
 import React, { useMemo } from 'react';
 import { getClassName } from 'utils';
-import 'styles/text.scss';
 
-const Text = ({
+const Heading = ({
+  level = 1,
+  children,
   align,
   primary = true,
   secondary,
   success,
   warning,
   light,
-  small = true,
-  medium,
-  large,
+  big,
   bold,
   className,
-  children,
   ...rest
 }) => {
   const cssClasses = useMemo(
@@ -22,26 +20,24 @@ const Text = ({
       getClassName([
         'text',
         'font-weight-normal',
+        big ? 'font-size-xxl' : 'font-size-xl',
         primary && 'color-primary',
         secondary && 'color-secondary',
         success && 'color-success',
         warning && 'color-warning',
         light && 'color-light',
-        small && 'font-size-sm',
-        medium && 'font-size-md',
-        large && 'font-size-lg',
         bold && 'font-weight-bold',
         align && `text-align-${align}`,
         className,
       ]),
-    [primary, secondary, success, warning, light, small, medium, large, bold]
+    [primary, secondary, success, warning, light, big, bold, level]
   );
 
-  return (
-    <p className={cssClasses} {...rest}>
-      {children}
-    </p>
+  return React.createElement(
+    `h${level}`,
+    { className: cssClasses, ...rest },
+    children
   );
 };
 
-export default Text;
+export default Heading;

@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { Header, Footer, Content, Text } from 'components';
+import { Header, Heading, Footer, Content, Text, Container } from 'components';
 import 'styles/page-layout.scss';
 
 const PageLayout = ({ children }) => {
   return (
-    <main className="main-layout">
+    <main className="page-layout">
       <Header>
-        <Text large>
+        <Container>
           <Text bold large>
             Link
           </Text>
-          VOTE
-        </Text>
+          <Text large>VOTE</Text>
+        </Container>
       </Header>
       <Content>{children}</Content>
       <Footer />

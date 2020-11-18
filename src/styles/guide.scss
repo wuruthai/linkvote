@@ -1,5 +1,16 @@
 @import "variables";
 
+
+$space-list: ("sm" $space-sm), ("md" $space-md), ("lg" $space-lg);
+$font-size-list: ("sm" $font-size-sm), ("md" $font-size-md), ("lg" $font-size-lg), ("xl" $font-size-xl), ("xxl" $font-size-xxl);
+$font-weight-list: ("normal" $font-weight-normal), ("bold" $font-weight-bold);
+$sides: (top, bottom, center, left, right);
+$color-list: ("primary" $color-primary), ("light" $color-light), ("secondary" $color-secondary), ("warning" $color-warning), ("success" $color-success);
+
+$flex-direction-list: row, row-reserve, column, column-reserve;
+$flex-justify-list:  ("start" flex-start), ("end" flex-end), ("around" space-around), ("between" space-between), ("evenly" space-evenly);
+$flex-align-list:  ("top" flex-start), ("bottom" flex-end), ("middle" center);
+
 // create basic css classes for margin-padding
 // example usage margin-bottom-sm or padding-top-lg or padding-md
 @each $space in $space-list {
@@ -12,17 +23,25 @@
   .padding-#{$key} {
     padding: $value;
   }
+
   @each $side in $sides {
-    .margin-#{$side}-#{$key} {
-      margin-#{$side}: $value;
-    }
-  
-    .p-#{$side}-#{$key} {
-      padding-#{$side}: $value;
+    @if side != "center" {
+      .margin-#{$side}-#{$key} {
+        margin-#{$side}: $value;
+      }
+    
+      .p-#{$side}-#{$key} {
+        padding-#{$side}: $value;
+      }
+    
     }
   }
 }
-
+@each $side in $sides {
+  .text-align-#{$side} {
+    text-align: $side;
+  }  
+}
 @each $color in $color-list {
   $key: nth($color, 1);
   $value: nth($color, 2);
