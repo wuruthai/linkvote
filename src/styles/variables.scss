@@ -1,15 +1,26 @@
 $color-primary: black;
 $color-light: gray;
 $color-secondary: white;
+$color-success: green;
 $color-warning: tomato;
 
 $space-sm: 10px;
 $space-md: 20px;
 $space-lg: 30px;
 
+$font-size-sm: 14px;
+$font-size-md: 18px;
+$font-size-lg: 20px;
+
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+
+$font-family: 'Roboto';
+
 $border-radius: 8px;
 
 $space-list: ("sm" $space-sm), ("md" $space-md), ("lg" $space-lg);
+$font-size-list: ("sm" $font-size-sm), ("md" $font-size-md), ("lg" $font-size-lg);
+$font-weight-list: ("normal" $font-weight-normal), ("bold" $font-weight-bold);
 $sides: (top, bottom, left, right);
-
-$color-list: ("primary" $color-primary), ("light" $color-light), ("secondary" $color-secondary), ("warning" $color-warning);
+$color-list: ("primary" $color-primary), ("light" $color-light), ("secondary" $color-secondary), ("warning" $color-warning), ("success" $color-success);

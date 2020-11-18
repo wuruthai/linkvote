@@ -1,18 +1,15 @@
 class Storage {
-  storeData(key, value) {
-    loca;
+  static storeData(key, value) {
+    if (!key) throw new Error('Can not write to storage');
+    const stringValue = JSON.stringify(value);
+    localStorage.setItem(key, stringValue);
   }
 
-  async retrieveData(key) {
-    try {
-      const value = await AsyncStorage.getItem(key);
-      return value ? JSON.parse(value) : value;
-    } catch (error) {
-      throw new Error('Can not read from storage');
-    }
+  static retrieveData(key) {
+    const value = localStorage.getItem(key);
+    const parsedValue = JSON.parse(value);
+    return parsedValue;
   }
 }
 
-const storage = new Storage();
-
-export default storage;
+export default Storage;

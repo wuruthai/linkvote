@@ -1,5 +1,5 @@
 import React from 'react';
-
-const HomePage = () => <p>HomePage</p>;
+import { Text } from 'components';
+const HomePage = () => <Text large>asf</Text>;
 
 export default HomePage;

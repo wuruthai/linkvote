@@ -35,4 +35,20 @@
     color: $value;
   }
 }
+@each $size in $font-size-list {
+  $key: nth($size, 1);
+  $value: nth($size, 2);
+
+  .font-size-#{$key} {
+    font-size: $value;
+  }
+}
+@each $weight in $font-weight-list {
+  $key: nth($weight, 1);
+  $value: nth($weight, 2);
+
+  .font-weight-#{$key} {
+    font-weight: $value;
+  }
+}
 

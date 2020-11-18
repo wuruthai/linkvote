@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { UserProvider } from './user.context';
+import { VoteProvider } from './user.context';
 
 const StoreProvider = ({ children }) => {
-  return <UserProvider>{children}</UserProvider>;
+  return <VoteProvider>{children}</VoteProvider>;
 };
 
 export default StoreProvider;
