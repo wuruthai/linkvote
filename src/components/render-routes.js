@@ -1,5 +1,5 @@
 import React from 'react';
-import RouteWithSubRoutes from '../route-with-sub-routes/route-with-sub-routes';
+import RouteWithSubRoutes from './route-with-sub-routes';
 import { Route, Switch } from 'react-router-dom';
 
 const RenderRoutes = ({ routes }) => {

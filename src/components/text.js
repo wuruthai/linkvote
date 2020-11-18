@@ -1,5 +1,7 @@
 import React, { useMemo } from 'react';
 import { getClassName } from 'utils';
+import 'styles/text.scss';
+
 const Text = ({
   primary = true,
   secondary,
@@ -17,6 +19,7 @@ const Text = ({
   const cssClasses = useMemo(
     () =>
       getClassName([
+        'text',
         'font-weight-normal',
         primary && 'color-primary',
         secondary && 'color-secondary',

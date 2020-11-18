@@ -1,12 +1,13 @@
 import React from 'react';
 import routes from 'routes';
-import { RenderRoutes, Layout } from 'components';
+import { RenderRoutes } from 'components';
+import { PageLayout } from 'layouts';
 
 function App() {
   return (
-    <Layout>
+    <PageLayout>
       <RenderRoutes routes={routes} />
-    </Layout>
+    </PageLayout>
   );
 }
 

@@ -52,3 +52,33 @@
   }
 }
 
+@each $direction in $flex-direction-list {
+
+  .flex-#{$direction} {
+    display: flex;
+    flex-direction: $direction;
+  }
+
+  @each $justify in $flex-justify-list {
+    $justifyKey: nth($justify, 1);
+    $justifyVal: nth($justify, 2);
+  
+    .flex-#{$direction}-#{$justifyKey} {
+      display: flex;
+      flex-direction: $direction;
+      justify-content: $justifyVal;
+    }
+
+    @each $align in $flex-align-list {
+      $alignKey: nth($align, 1);
+      $alignVal: nth($align, 2);
+    
+      .flex-#{$direction}-#{$justifyKey}-#{$alignKey} {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: $justifyVal;
+        align-items: $alignVal;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "variables";
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0 $space-lg;
+}
+
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+  border-bottom: 1px solid $color-light;
+}
