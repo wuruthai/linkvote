@@ -1,5 +1,6 @@
 import React from 'react';
 import homeRoute from './home.route.js';
+import newItemRoute from './new-item.route.js';
 /**
  * Render a route with potential sub routes
  * https://reacttraining.com/react-router/web/example/route-config
@@ -7,6 +8,7 @@ import homeRoute from './home.route.js';
 
 const routes = [
   homeRoute,
+  newItemRoute,
   // {
   //   path: '/page',
   //   key: 'APP_PAGE',

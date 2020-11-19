@@ -3,11 +3,11 @@ import { Container, Text } from 'components';
 import VotePointBox from './vote-point-box';
 import VoteContent from './vote-content';
 
-const VoteRow = ({ point, ...rest }) => {
+const VoteRow = ({ item }) => {
   return (
     <Container className="vote-row" justify="start" align="top">
-      <VotePointBox />
-      <VoteContent />
+      <VotePointBox count={item.count} />
+      <VoteContent name={item.name} uri={item.uri} />
     </Container>
   );
 };

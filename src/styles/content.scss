@@ -1,4 +1,10 @@
+@import './variables.scss';
+
 .content {
   width: 100%;
   min-height: 100%;
+
+  &-wrapper {
+    max-width: 400px;
+  }
 }

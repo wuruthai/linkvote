@@ -6,6 +6,7 @@
   transition: all 0.2s;
   outline: none;
   fill: $dark;
+  cursor: pointer;
   
   &-primary {
     padding: $space-sm $space-md;

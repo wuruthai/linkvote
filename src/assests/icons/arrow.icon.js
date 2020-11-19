@@ -1,6 +1,13 @@
 import React from 'react';
 
-const ArrowIcon = ({ up, ...props }) => (
+const directions = {
+  down: 0,
+  up: 180,
+  right: 270,
+  left: 90,
+};
+
+const ArrowIcon = ({ direction = 'down', ...props }) => (
   <svg
     version="1.1"
     id="Capa_1"
@@ -11,7 +18,7 @@ const ArrowIcon = ({ up, ...props }) => (
     height="14px"
     viewBox="0 0 32.75 32.75"
     style={{
-      transform: up && 'rotate(180deg)',
+      transform: `rotate(${directions[direction]}deg)`,
     }}
     xmlSpace="preserve"
     {...props}

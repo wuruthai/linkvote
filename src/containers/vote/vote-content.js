@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Heading, Text } from 'components';
 import VoteButton from './vote-button';
 
-const VoteContent = ({ name, link, ...rest }) => {
+const VoteContent = ({ name, uri, ...rest }) => {
   return (
     <Container
       className="vote-content"
@@ -17,9 +17,9 @@ const VoteContent = ({ name, link, ...rest }) => {
         align="top"
       >
         <Text large bold>
-          asfas fasjlfh
+          {name}
         </Text>
-        <Text>link</Text>
+        <Text>{uri}</Text>
       </Container>
       <Container className="vote-buttons" justify="start">
         <VoteButton up />

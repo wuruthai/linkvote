@@ -24,10 +24,9 @@ const Button = ({
         circle && 'button-circle',
         small && 'font-size-sm',
         large && 'font-size-lg',
-        icon,
         className,
       ]),
-    [className, ghost]
+    [className, ghost, primary, stretch, circle, small, large]
   );
   return (
     <button className={classes} {...rest}>

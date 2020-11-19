@@ -1,6 +1,6 @@
 @import '../../styles/variables.scss';
 
-$box-size: 100px;
+$box-size: 120px;
 
 .vote {
   height: $box-size;
@@ -12,7 +12,7 @@ $box-size: 100px;
   
   &-point-box {
     max-width: $box-size;
-    max-height: $box-size;
+    min-height: $box-size;
     background-color: lighten($background-color, 5px);
     border: 2px solid $color-secondary;
     border-radius: $border-radius;
