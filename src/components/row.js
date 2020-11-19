@@ -1,11 +1,10 @@
 import React, { useMemo } from 'react';
-import { getClassName } from 'utils';
 
 // align props ===> top , bottom , middle
 // justify props ===> start, end,around,between,evenly
 // direction props ===> row, row-reserve, column, column-reserve
 
-const Container = ({
+const Row = ({
   direction = 'row',
   justify = 'start',
   align = 'middle',
@@ -19,4 +18,4 @@ const Container = ({
   return <div className={cssClasses} {...rest}></div>;
 };
 
-export default Container;
+export default Row;

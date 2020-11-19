@@ -1,1 +1,7 @@
 @import "variables";
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: $color-secondary;
+  padding: $space-sm $space-md;
+}

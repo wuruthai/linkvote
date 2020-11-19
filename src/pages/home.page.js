@@ -1,9 +1,9 @@
 import React from 'react';
-import { Text } from 'components';
+import { Text, Row } from 'components';
 const HomePage = () => (
-  <Text large bold>
-    asf
-  </Text>
+  <Row>
+    <Text>asf</Text>
+  </Row>
 );
 
 export default HomePage;

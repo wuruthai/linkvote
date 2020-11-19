@@ -1,9 +1,14 @@
 import React from 'react';
 import 'styles/header.scss';
-
+import { Row, Text, Heading } from 'components';
 const Header = ({ children, ...rest }) => (
   <header className="header" {...rest}>
-    {children}
+    <Row>
+      <Heading bold large>
+        Link
+      </Heading>
+      <Heading large>VOTE</Heading>
+    </Row>
   </header>
 );
 
