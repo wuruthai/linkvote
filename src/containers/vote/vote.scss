@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+
+$box-size: 100px;
+
+.vote {
+  height: $box-size;
+
+
+  &-row {
+    margin-bottom: $space-md;
+  }
+  
+  &-point-box {
+    max-width: $box-size;
+    max-height: $box-size;
+    background-color: lighten($background-color, 5px);
+    border: 2px solid $color-secondary;
+    border-radius: $border-radius;
+  }
+  &-content {
+    margin-left: $space-md;
+  }
+
+  &-buttons {
+    flex: 30px;
+  }
+
+  &-button {
+    &:first-child {
+      margin-right: $space-lg;
+    }
+  }
+}

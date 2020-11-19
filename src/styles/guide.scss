@@ -8,7 +8,7 @@ $sides: (top, bottom, center, left, right);
 $color-list: ("primary" $color-primary), ("light" $color-light), ("secondary" $color-secondary), ("warning" $color-warning), ("success" $color-success);
 
 $flex-direction-list: row, row-reserve, column, column-reserve;
-$flex-justify-list:  ("start" flex-start), ("end" flex-end), ("around" space-around), ("between" space-between), ("evenly" space-evenly);
+$flex-justify-list:  ("start" flex-start),("center" center), ("end" flex-end), ("around" space-around), ("between" space-between), ("evenly" space-evenly);
 $flex-align-list:  ("top" flex-start), ("bottom" flex-end), ("middle" center);
 
 // create basic css classes for margin-padding

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Text, Row } from 'components';
+import { Text, Container } from 'components';
 import { Header, Content } from 'partials';
 import 'styles/page-layout.scss';
 

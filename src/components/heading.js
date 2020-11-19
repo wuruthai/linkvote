@@ -5,7 +5,7 @@ const Heading = ({
   level = 1,
   children,
   align,
-  primary = true,
+  primary,
   secondary,
   success,
   warning,
@@ -18,7 +18,7 @@ const Heading = ({
   const cssClasses = useMemo(
     () =>
       getClassName([
-        'text',
+        'heading',
         'font-weight-normal',
         big ? 'font-size-xxl' : 'font-size-xl',
         primary && 'color-primary',

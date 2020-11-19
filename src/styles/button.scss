@@ -1,0 +1,47 @@
+@import "../styles/variables.scss";
+
+.button {
+  font-size: $font-size-sm;
+  background-color: transparent;
+  transition: all 0.2s;
+  outline: none;
+  fill: $dark;
+  
+  &-primary {
+    padding: $space-sm $space-md;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+    border-radius: $border-radius;
+    background-color: $background-color;
+    fill: $color-primary;
+    
+    &:hover {
+      background-color: $color-light;
+    }
+    &:active {
+      background-color: $color-secondary;
+    }
+  }
+  &-stretch {
+    width: 100%;
+  }
+  &-circle {
+    border-radius: $border-radius-circle;
+
+  }
+  &-ghost {
+    background-color: transparent;
+    color: $color-secondary;
+    fill: $color-secondary;
+    border: none;
+
+    &:hover {
+      color: $dark;
+      fill: $dark;
+    }
+    &:active {
+      color: $color-primary;
+      fill: $color-primary;
+    }
+  }
+}

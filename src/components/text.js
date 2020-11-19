@@ -4,7 +4,7 @@ import 'styles/text.scss';
 
 const Text = ({
   align,
-  primary = true,
+  primary,
   secondary,
   success,
   warning,
@@ -12,6 +12,8 @@ const Text = ({
   small = true,
   medium,
   large,
+  xLarge,
+  xxLarge,
   bold,
   className,
   children,
@@ -30,6 +32,8 @@ const Text = ({
         small && 'font-size-sm',
         medium && 'font-size-md',
         large && 'font-size-lg',
+        xLarge && 'font-size-xl',
+        xxLarge && 'font-size-xxl',
         bold && 'font-weight-bold',
         align && `text-align-${align}`,
         className,

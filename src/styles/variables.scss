@@ -1,14 +1,14 @@
-$red-crayola: #ED254E;
-$green-munsell: #00A878;
-$wheat: #EAD2AC;
-$oxford-blue: #011936;
-$black-coral: #465362;
+$dark: #0F110C;
+$white: #fff;
 
-$color-primary: #0F110C;
-$color-secondary: #406E8E;
-$color-light: #CECCCC;
+$color-primary: #ffd700;
+$color-secondary:#022c43;
+
+$color-light: #053f5e;
 $color-success: #32965D;
 $color-warning: #C81D25;
+
+$background-color: #115579;
 
 $space-sm: 10px;
 $space-md: 20px;
@@ -20,9 +20,14 @@ $font-size-lg: 20px;
 $font-size-xl: 32px;
 $font-size-xxl: 40px;
 
-$font-weight-normal: 200;
+$font-weight-normal: 400;
 $font-weight-bold: 900;
 
 $font-family: 'Roboto';
 
 $border-radius: 8px;
+$border-radius-circle: 30px;
+
+:export {
+  whitecolor: $white;
+}
