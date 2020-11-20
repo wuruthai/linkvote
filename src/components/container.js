@@ -9,6 +9,7 @@ const Container = ({
   direction = 'row',
   justify = 'start',
   align = 'middle',
+  wrap,
   className,
   ...rest
 }) => {

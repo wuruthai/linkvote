@@ -1,0 +1,25 @@
+@import 'variables';
+
+.form {
+  width: 100%;
+
+  &-head {
+    padding: $space-md $space-sm;
+  }
+
+
+&-input {
+  transition: all 0.2s;
+  margin-bottom: $space-md;
+
+  .error {
+    border-color: $color-warning;
+  }
+  .error-text {
+    margin-top: $space-sm;
+  }
+  .input-label {
+    margin-bottom: $space-sm;
+  }
+}
+}

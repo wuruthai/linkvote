@@ -11,23 +11,34 @@
   &-primary {
     padding: $space-sm $space-md;
     color: $color-primary;
-    border: 2px solid $color-primary;
+    border: 1px solid transparent;
     border-radius: $border-radius;
-    background-color: $background-color;
+    background-color: $color-light;;
     fill: $color-primary;
     
+    svg {
+    }
+    
     &:hover {
-      background-color: $color-light;
+      * {
+        color: $color-secondary;
+        fill: $color-secondary;
+      }
     }
     &:active {
-      background-color: $color-secondary;
+      border-color: $color-primary;
     }
   }
   &-stretch {
     width: 100%;
   }
   &-circle {
+    border-color: $color-primary;
     border-radius: $border-radius-circle;
+
+    &:hover {
+      background-color: $dark;
+    }
 
   }
   &-ghost {
@@ -35,14 +46,16 @@
     color: $color-secondary;
     fill: $color-secondary;
     border: none;
+    border-bottom: 1px solid transparent;
 
     &:hover {
-      color: $dark;
-      fill: $dark;
+      color: $color-primary;
+      fill: $color-primary;
     }
     &:active {
       color: $color-primary;
       fill: $color-primary;
+      border-bottom: 1px solid $color-primary;
     }
   }
 }

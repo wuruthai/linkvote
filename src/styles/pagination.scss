@@ -1,0 +1,20 @@
+@import './variables.scss';
+
+.pagination {
+  flex-wrap: wrap;
+  width: inherit;
+  &-item {
+    margin-left: $space-sm;
+    margin-top: $space-sm;
+  }
+  &-button {
+    padding: 3px 6px;
+
+    &:active {
+      background-color: $dark;
+    }
+  }
+  &-item.active {
+    border-color: $color-primary;
+  }
+}

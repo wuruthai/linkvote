@@ -3,10 +3,10 @@
 $box-size: 120px;
 
 .vote {
-  height: $box-size;
 
 
   &-row {
+    height: $box-size;
     margin-bottom: $space-md;
   }
   

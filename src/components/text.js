@@ -38,7 +38,18 @@ const Text = ({
         align && `text-align-${align}`,
         className,
       ]),
-    [primary, secondary, success, warning, light, small, medium, large, bold]
+    [
+      primary,
+      secondary,
+      success,
+      warning,
+      light,
+      small,
+      medium,
+      large,
+      bold,
+      className,
+    ]
   );
 
   return (

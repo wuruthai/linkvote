@@ -16,10 +16,10 @@ const VoteContent = ({ name, uri, ...rest }) => {
         justify="start"
         align="top"
       >
-        <Text large bold>
+        <Text large bold primary>
           {name}
         </Text>
-        <Text>{uri}</Text>
+        <Text secondary>{uri}</Text>
       </Container>
       <Container className="vote-buttons" justify="start">
         <VoteButton up />
