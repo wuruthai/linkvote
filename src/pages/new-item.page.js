@@ -1,13 +1,15 @@
 import React from 'react';
-import { BackButton } from 'containers';
 import { newItemSchema } from 'schemas';
-import { FormInput, Button, Form, Heading, Container } from 'components';
+import { FormInput, Form } from 'components';
 import { useFormik } from 'formik';
 import { useNavgation } from 'hooks';
+import { useVote } from 'context/vote.context';
 import 'styles/new-item.page.scss';
 
 const HomePage = () => {
   const { goHomePage } = useNavgation();
+  const { addNewLink } = useVote();
+
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -15,6 +17,7 @@ const HomePage = () => {
     },
     validationSchema: newItemSchema,
     onSubmit: (values) => {
+      addNewLink(values);
       goHomePage();
     },
   });

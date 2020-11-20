@@ -11,3 +11,5 @@ export const LeftArrowIcon = (props) => (
 );
 
 export { default as PlusIcon } from './plus.icon';
+export { default as CaretDownIcon } from './caret-down.icon';
+export { default as TrashIcon } from './trash.icon';

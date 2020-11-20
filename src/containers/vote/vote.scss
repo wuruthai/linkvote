@@ -1,13 +1,38 @@
 @import '../../styles/variables.scss';
 
-$box-size: 120px;
+$box-size: 100px;
 
 .vote {
 
+  &-trash {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    background-color: transparent;
+    &:active {
+      border-color: transparent;
+    }
 
+    &-icon {
+      width: 30px;
+      height: 30px;
+
+    }
+  }
   &-row {
-    height: $box-size;
+    position: relative;
+    height: $box-size + 20;
     margin-bottom: $space-md;
+    padding: $space-sm;
+    border-radius: $border-radius;
+    
+    &:hover {
+      background-color: lighten($color-light, 10%);
+      .vote-trash {
+        display: block;
+      }
+    }
   }
   
   &-point-box {

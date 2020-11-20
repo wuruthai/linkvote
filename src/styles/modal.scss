@@ -1,0 +1,18 @@
+@import './variables.scss';
+
+.modal-container {
+
+}
+
+.modal {
+  background-color: $background-color;
+  width: max-content;
+  height: max-content;
+  padding: $space-lg;
+  border-radius: $border-radius;
+
+  &-title,
+  &-description{
+    margin-bottom: $space-lg;
+  }
+}

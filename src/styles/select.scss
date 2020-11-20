@@ -1,0 +1,30 @@
+@import "variables";
+$icon-size: 20px;
+
+.select {
+  width: 200px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 20px;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  border-radius: $border-radius;
+  background-color: $color-light;;
+  fill: $color-primary;
+  outline: none;
+
+ &-icon {
+   position: absolute;
+   z-index: 1000;
+   fill: $color-primary;
+   top: calc(50% - #{$icon-size / 2});
+   right: $space-sm;
+   width: $icon-size;
+   height: $icon-size;
+ }
+}
+
+.select-container {
+  position: relative;
+}

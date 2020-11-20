@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Text } from 'components';
 
-const VotePointBox = ({ count }) => {
+const VotePointBox = ({ point }) => {
   return (
     <Container
       className="vote-point-box"
@@ -10,7 +10,7 @@ const VotePointBox = ({ count }) => {
       align="middle"
     >
       <Text xxLarge bold secondary>
-        {count}
+        {point}
       </Text>
       <Text medium secondary>
         Points
