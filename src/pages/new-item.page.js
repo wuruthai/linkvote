@@ -4,11 +4,14 @@ import { FormInput, Form } from 'components';
 import { useFormik } from 'formik';
 import { useNavgation } from 'hooks';
 import { useVote } from 'context/vote.context';
+import { useToaster } from 'context/toaster.context';
+
 import 'styles/new-item.page.scss';
 
 const HomePage = () => {
   const { goHomePage } = useNavgation();
   const { addNewLink } = useVote();
+  const { showToaster } = useToaster();
 
   const formik = useFormik({
     initialValues: {
@@ -18,6 +21,7 @@ const HomePage = () => {
     validationSchema: newItemSchema,
     onSubmit: (values) => {
       addNewLink(values);
+      showToaster(`"${values.name}" added.`);
       goHomePage();
     },
   });

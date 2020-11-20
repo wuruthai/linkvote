@@ -1,0 +1,16 @@
+@import '../styles/variables.scss';
+.toaster-container {
+  position: fixed;
+  height: max-content;
+  z-index: 3000;
+
+}
+.toaster {
+  width: max-content;
+  top: 0;
+  background-color: $color-success;
+  padding: $space-sm;
+  border-radius: $border-radius;
+  margin-top: $space-md;
+  
+}

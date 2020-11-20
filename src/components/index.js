@@ -15,3 +15,4 @@ export { default as FormInput } from './form/form-input';
 
 export { default as BluredBackground } from './blured-background';
 export { default as Modal } from './modal';
+export { default as Toaster } from './toaster';

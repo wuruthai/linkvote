@@ -1,6 +1,6 @@
 import React from 'react';
 import { SubmitLinkButton, VoteList } from 'containers';
-import { Pagination, Select, Modal } from 'components';
+import { Pagination, Select, Modal, Toaster } from 'components';
 import { useVote } from 'context/vote.context';
 import { useSorted, usePagination } from 'hooks';
 import { SORTING_CONST } from 'constant';

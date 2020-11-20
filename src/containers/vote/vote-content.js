@@ -5,13 +5,18 @@ import { useVote } from 'context/vote.context';
 import { OPERATOR_CONST } from 'constant';
 import { TrashIcon } from 'assests/icons';
 import { useModal } from 'hooks';
+import { useToaster } from 'context/toaster.context';
 
 const VoteContent = ({ item }) => {
   const { onVote, deleteLink } = useVote();
+  const { showToaster } = useToaster();
   const { Modal, showModal } = useModal({
     title: 'Remove Item',
     description: `Do you want to remove ${item.name}`,
-    onApply: () => deleteLink(item.id),
+    onApply: () => {
+      deleteLink(item.id);
+      showToaster(`"${item.name}" removed.`);
+    },
   });
   return (
     <>
