@@ -11,7 +11,7 @@ module.exports = {
   },
   extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
   plugins: [],
-  // add your custom rules here
+  // add your custom rules heres
   rules: {
     'react/prop-types': 0,
     'react/display-name': 0,
