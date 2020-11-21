@@ -26,6 +26,7 @@ $box-size: 100px;
     margin-bottom: $space-md;
     padding: $space-sm;
     border-radius: $border-radius;
+    overflow: hidden;
     
     &:hover {
       background-color: lighten($color-light, 10%);
@@ -37,6 +38,7 @@ $box-size: 100px;
   
   &-point-box {
     max-width: $box-size;
+    min-width: $box-size;
     min-height: $box-size;
     background-color: lighten($background-color, 5px);
     border: 2px solid $color-secondary;

@@ -5,7 +5,6 @@ import 'styles/select.scss';
 
 const Select = ({
   name = 'custom',
-  selectedValue,
   onChange,
   data,
   valueKey = 'id',

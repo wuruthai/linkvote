@@ -7,15 +7,16 @@ import { SORTING_CONST } from 'constant';
 import 'styles/home.page.scss';
 
 const sortingData = [
+  { name: 'Last Edited', sortType: SORTING_CONST.DEFAULT },
   { name: 'Most Voted (Z - A)', sortType: SORTING_CONST.DESC },
-  { name: 'Less Voted (Z - A)', sortType: SORTING_CONST.ASC },
+  { name: 'Less Voted (A - Z)', sortType: SORTING_CONST.ASC },
 ];
 
 const HomePage = () => {
   const { voteList } = useVote();
   const { sortedList, sortType, changeSortType } = useSorted(
     voteList,
-    SORTING_CONST.DESC,
+    SORTING_CONST.DEFAULT,
     'point'
   );
   const { pageData, pageNum, setPageNum } = usePagination(sortedList);
@@ -27,7 +28,6 @@ const HomePage = () => {
         <>
           <Select
             name="vote-sorting"
-            selectedValue={sortType}
             valueKey="sortType"
             data={sortingData}
             onChange={(item) => changeSortType(item.sortType)}
