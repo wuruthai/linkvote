@@ -19,6 +19,7 @@ const useModal = ({ title, description, onApply }) => {
       />
     ) : null,
     showModal,
+    visibleModal,
   };
 };
 
