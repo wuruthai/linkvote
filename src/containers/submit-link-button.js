@@ -9,8 +9,8 @@ const SubmitLinkButton = (props) => {
   return (
     <Button stretch onClick={goNewItemPage} {...props}>
       <Container justify="center" align="middle">
-        <PlusIcon width={50} height={50} className="margin-right-lg" />
-        <Text large primary className="text-nowrap">
+        <PlusIcon width={50} height={50} className="margin-right-sm" />
+        <Text xLarge primary className="text-nowrap">
           SUBMIT A LINK
         </Text>
       </Container>
