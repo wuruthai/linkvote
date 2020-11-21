@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Toaster } from 'components';
 const ToasterContext = React.createContext();
 
-const TOASTER_TIME = 2500;
+export const TOASTER_TIME = 2500;
 
 export const ToasterProvider = ({ children }) => {
   const [visibleToaster, setVisibleToaster] = useState(false);
@@ -17,7 +17,7 @@ export const ToasterProvider = ({ children }) => {
     }, TOASTER_TIME);
   };
   return (
-    <ToasterContext.Provider value={{ showToaster }}>
+    <ToasterContext.Provider value={{ showToaster, visibleToaster }}>
       {visibleToaster && <Toaster message={message} />}
       {children}
     </ToasterContext.Provider>
