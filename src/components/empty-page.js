@@ -7,10 +7,10 @@ const EmptyPage = ({ title, message }) => {
   return (
     <Container direction="column">
       <BrokeIcon className="margin-bottom-md" />
-      <Text primary large bold className="margin-bottom-md" center>
+      <Text primary large bold className="margin-bottom-md">
         {title}
       </Text>
-      <Text primary medium className="margin-bottom-md" center>
+      <Text primary medium className="margin-bottom-md">
         {message}
       </Text>
     </Container>
