@@ -14,7 +14,12 @@ function useSorted(data, initialSortType, sortKey) {
       } else if (a[sortKey] < b[sortKey]) {
         return sortType === SORTING_CONST.DESC ? 1 : -1;
       } else {
-        return 0;
+        return (
+          (a.edited.getTime &&
+            b.edited.getTime &&
+            (a.edited.getTime() > b.edited.getTime() ? -1 : 1)) ||
+          0
+        );
       }
     });
     return list;
