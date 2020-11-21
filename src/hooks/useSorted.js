@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { SORTING_CONST } from 'constant';
 
-function useSorted(data, initialSortType, sortKey) {
+function useSorted(data, initialSortType = SORTING_CONST.DESC, sortKey) {
   const [sortType, changeSortType] = useState(initialSortType);
 
   const sortedList = useMemo(() => {
@@ -24,7 +24,6 @@ function useSorted(data, initialSortType, sortKey) {
     });
     return list;
   }, [data, sortType]);
-
   return { sortedList, sortType, changeSortType };
 }
 
