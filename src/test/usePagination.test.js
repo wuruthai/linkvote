@@ -10,16 +10,14 @@ const checkPage = (pageData, pageNum) => {
   expect(isAllSame).toBe(true);
 };
 
-describe('usePagination was workly corrected', () => {
-  test('usePagination()', () => {
-    const { result, rerender } = renderHook(() => usePagination(pageData));
+test('usePagination()', () => {
+  const { result, rerender } = renderHook(() => usePagination(pageData));
 
-    expect(result.current.pageNum).toBe(1);
-    expect(result.current.pageData.length).toBe(5);
-    expect(result.current.setPageNum).toBeInstanceOf(Function);
-    checkPage(result.current.pageData, result.current.pageNum);
-    act(() => result.current.setPageNum(2));
-    expect(result.current.pageNum).toBe(2);
-    checkPage(result.current.pageData, result.current.pageNum);
-  });
+  expect(result.current.pageNum).toBe(1);
+  expect(result.current.pageData.length).toBe(5);
+  expect(result.current.setPageNum).toBeInstanceOf(Function);
+  checkPage(result.current.pageData, result.current.pageNum);
+  act(() => result.current.setPageNum(2));
+  expect(result.current.pageNum).toBe(2);
+  checkPage(result.current.pageData, result.current.pageNum);
 });
