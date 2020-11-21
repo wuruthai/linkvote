@@ -22,11 +22,11 @@ $box-size: 100px;
   }
   &-row {
     position: relative;
-    height: $box-size + 20;
+    min-height: $box-size + 20;
     margin-bottom: $space-md;
     padding: $space-sm;
     border-radius: $border-radius;
-    overflow: hidden;
+
     
     &:hover {
       background-color: lighten($color-light, 10%);
@@ -46,6 +46,8 @@ $box-size: 100px;
   }
   &-content {
     margin-left: $space-md;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
   }
 
   &-buttons {
