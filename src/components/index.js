@@ -1,6 +1,8 @@
 export { default as RenderRoutes } from './render-routes';
 export { default as RouteWithSubRoutes } from './route-with-sub-routes';
 
+export { default as EmptyPage } from './empty-page';
+
 export { default as Pagination } from './pagination';
 export { default as BackButton } from './back-button';
 export { default as Container } from './container';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { SubmitLinkButton, VoteList } from 'containers';
-import { Pagination, Select, Modal, Toaster } from 'components';
+import { Pagination, Select, EmptyPage } from 'components';
 import { useVote } from 'context/vote.context';
 import { useSorted, usePagination } from 'hooks';
 import { SORTING_CONST } from 'constant';
@@ -22,7 +22,8 @@ const HomePage = () => {
   return (
     <>
       <SubmitLinkButton className="home-page-submit-link-button" />
-      {voteList.length > 0 && (
+
+      {voteList.length > 0 ? (
         <>
           <Select
             name="vote-sorting"
@@ -39,6 +40,11 @@ const HomePage = () => {
             pageNum={pageNum}
           />
         </>
+      ) : (
+        <EmptyPage
+          title="List is empty!"
+          message="You can add new link by clicking the 'Submit a link' button on the top."
+        />
       )}
     </>
   );

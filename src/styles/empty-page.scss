@@ -1,0 +1,9 @@
+@import './variables.scss';
+
+.empty-page {
+  color: $color-primary;
+  svg {
+
+    fill: $color-primary;
+  }
+}
