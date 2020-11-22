@@ -9,12 +9,11 @@ function useSorted(data, initialSortType = SORTING_CONST.DEFAULT, sortKey) {
     // copy state don't try mutate the another state
     const list = [...data];
     list.sort((a, b) => {
-      if (!sortType === SORTING_CONST.DEFAULT || a[sortKey] === b[sortKey]) {
+      if (sortType === SORTING_CONST.DEFAULT || a[sortKey] === b[sortKey]) {
         return (
-          (a.edited.getTime &&
-            b.edited.getTime &&
-            (a.edited.getTime() > b.edited.getTime() ? -1 : 1)) ||
-          0
+          a.edited.getTime &&
+          b.edited.getTime &&
+          (a.edited.getTime() > b.edited.getTime() ? -1 : 1)
         );
       } else if (a[sortKey] > b[sortKey]) {
         return sortType === SORTING_CONST.DESC ? -1 : 1;

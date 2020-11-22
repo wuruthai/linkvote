@@ -3,13 +3,20 @@ import { Storage } from 'utils';
 import { STORAGE_CONST, OPERATOR_CONST } from 'constant';
 import { v4 as uuidv4 } from 'uuid';
 
-const getPersistedLinkList = () =>
-  Storage.retrieveData(STORAGE_CONST.LINK_LIST);
+const getInitialVoteList = () => {
+  const storagedList = Storage.retrieveData(STORAGE_CONST.LINK_LIST) || [];
+  const list = storagedList.map((link) => ({
+    ...link,
+    created: new Date(link.created),
+    edited: new Date(link.edited),
+  }));
+  return list;
+};
 
 const VoteContext = React.createContext();
 
 export const VoteProvider = ({ children }) => {
-  const [voteList, setVoteList] = useState(getPersistedLinkList() || []);
+  const [voteList, setVoteList] = useState(getInitialVoteList);
 
   useEffect(() => {
     Storage.storeData(STORAGE_CONST.LINK_LIST, voteList);

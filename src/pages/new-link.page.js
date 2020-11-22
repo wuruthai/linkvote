@@ -1,14 +1,12 @@
 import React from 'react';
-import { newItemSchema } from 'schemas';
+import { linkSchema as validationSchema } from 'schemas';
 import { FormInput, Form } from 'components';
 import { useFormik } from 'formik';
 import { useNavgation } from 'hooks';
 import { useVote } from 'context/vote.context';
 import { useToaster } from 'context/toaster.context';
 
-import 'styles/new-item.page.scss';
-
-const HomePage = () => {
+const NewLinkPage = () => {
   const { goHomePage } = useNavgation();
   const { addNewLink } = useVote();
   const { showToaster } = useToaster();
@@ -24,7 +22,7 @@ const HomePage = () => {
       name: '',
       uri: '',
     },
-    validationSchema: newItemSchema,
+    validationSchema,
     onSubmit,
   });
 
@@ -52,4 +50,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default NewLinkPage;
