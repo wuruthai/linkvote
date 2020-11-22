@@ -3,6 +3,13 @@ import { v4 as uuidv4 } from 'uuid';
 const sortingData = [
   {
     id: uuidv4(),
+    name: 'First Created (A - Z)',
+    sortType: SORTING_CONST.DESC,
+    sortKey: 'created',
+    secondaryKey: 'point',
+  },
+  {
+    id: uuidv4(),
     name: 'Last Created (Z - A)',
     sortType: SORTING_CONST.ASC,
     sortKey: 'created',
@@ -10,22 +17,15 @@ const sortingData = [
   },
   {
     id: uuidv4(),
-    name: 'Last Created (A - Z)',
+    name: 'First Edited (A - Z)',
     sortType: SORTING_CONST.DESC,
-    sortKey: 'created',
+    sortKey: 'edited',
     secondaryKey: 'point',
   },
   {
     id: uuidv4(),
     name: 'Last Edited (Z - A)',
     sortType: SORTING_CONST.ASC,
-    sortKey: 'edited',
-    secondaryKey: 'point',
-  },
-  {
-    id: uuidv4(),
-    name: 'Last Edited (A - Z)',
-    sortType: SORTING_CONST.DESC,
     sortKey: 'edited',
     secondaryKey: 'point',
   },
