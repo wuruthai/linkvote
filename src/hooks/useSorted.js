@@ -1,31 +1,41 @@
 import { useState, useMemo } from 'react';
 import { SORTING_CONST } from 'constant';
+import { getSortValue } from 'utils';
 
-function useSorted(data, initialSortType = SORTING_CONST.DEFAULT, sortKey) {
-  const [sortType, changeSortType] = useState(initialSortType);
+function useSorted(data, defaultSelectedSortingItem) {
+  const [selectedSortingItem, setSelectedSortingItem] = useState(
+    defaultSelectedSortingItem
+  );
 
   const sortedList = useMemo(() => {
     if (!data) return [];
     // copy state don't try mutate the another state
     const list = [...data];
     list.sort((a, b) => {
-      if (sortType === SORTING_CONST.DEFAULT || a[sortKey] === b[sortKey]) {
-        return (
-          a.edited.getTime &&
-          b.edited.getTime &&
-          (a.edited.getTime() > b.edited.getTime() ? -1 : 1)
-        );
-      } else if (a[sortKey] > b[sortKey]) {
-        return sortType === SORTING_CONST.DESC ? -1 : 1;
-      } else if (a[sortKey] < b[sortKey]) {
-        return sortType === SORTING_CONST.DESC ? 1 : -1;
+      const aValue = getSortValue(a, selectedSortingItem.sortKey);
+      const bValue = getSortValue(b, selectedSortingItem.sortKey);
+
+      if (aValue > bValue) {
+        return selectedSortingItem.sortType === SORTING_CONST.DESC ? -1 : 1;
+      } else if (aValue < bValue) {
+        return selectedSortingItem.sortType === SORTING_CONST.DESC ? 1 : -1;
       } else {
-        return 0;
+        if (!selectedSortingItem.secondaryKey) return 0;
+        const bSecondaryValue = getSortValue(
+          b,
+          selectedSortingItem.secondaryKey
+        );
+        const aSecondaryValue = getSortValue(
+          a,
+          selectedSortingItem.secondaryKey
+        );
+
+        return aSecondaryValue > bSecondaryValue ? -1 : 1 || 0;
       }
     });
     return list;
-  }, [data, sortType]);
-  return { sortedList, sortType, changeSortType };
+  }, [data, selectedSortingItem]);
+  return { sortedList, selectedSortingItem, setSelectedSortingItem };
 }
 
 export default useSorted;

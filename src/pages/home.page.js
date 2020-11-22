@@ -3,21 +3,14 @@ import { SubmitLinkButton, VoteList } from 'containers';
 import { Pagination, Select, EmptyPage } from 'components';
 import { useVote } from 'context/vote.context';
 import { useSorted, usePagination } from 'hooks';
-import { SORTING_CONST } from 'constant';
+import sortingData from 'data/vote-list-sorting.data';
 import 'styles/home.page.scss';
-
-const sortingData = [
-  { name: 'Last Edited', sortType: SORTING_CONST.DEFAULT },
-  { name: 'Most Voted (Z - A)', sortType: SORTING_CONST.DESC },
-  { name: 'Less Voted (A - Z)', sortType: SORTING_CONST.ASC },
-];
 
 const HomePage = () => {
   const { voteList } = useVote();
-  const { sortedList, sortType, changeSortType } = useSorted(
+  const { sortedList, selectedSortingItem, setSelectedSortingItem } = useSorted(
     voteList,
-    SORTING_CONST.DEFAULT,
-    'point'
+    sortingData[0]
   );
   const { pageData, pageNum, setPageNum } = usePagination(sortedList);
   return (
@@ -28,9 +21,10 @@ const HomePage = () => {
         <>
           <Select
             name="vote-sorting"
-            valueKey="sortType"
+            valueKey="id"
             data={sortingData}
-            onChange={(item) => changeSortType(item.sortType)}
+            value={selectedSortingItem.id}
+            onChange={(item) => setSelectedSortingItem(item)}
             className="margin-bottom-lg"
           />
           <VoteList data={pageData} />

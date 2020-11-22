@@ -27,11 +27,7 @@ const Select = ({
         }}
       >
         {data.map((item, index) => (
-          <option
-            key={`${name}-${index}`}
-            value={item[valueKey]}
-            onClick={() => console.log(item)}
-          >
+          <option key={`${name}-${index}`} value={item[valueKey]}>
             {item[nameKey]}
           </option>
         ))}
