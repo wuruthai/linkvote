@@ -6,11 +6,28 @@ import Container from '../container';
 import Button from '../button';
 import 'styles/form.scss';
 
-const Form = ({ children, head, submitButtonLabel, className, ...rest }) => {
+const Form = ({
+  children,
+  head,
+  onSubmit,
+  submitButtonLabel,
+  className,
+  ...rest
+}) => {
   const classes = getClassName(['form', className]);
-
+  function onKeyDown(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      onSubmit && onSubmit();
+    }
+  }
   return (
-    <form className={classes} {...rest}>
+    <form
+      className={classes}
+      onKeyDown={onKeyDown}
+      onSubmit={onSubmit}
+      {...rest}
+    >
       <BackButton />
       <Heading bold className="form-head">
         {head}

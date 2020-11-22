@@ -13,17 +13,19 @@ const HomePage = () => {
   const { addNewLink } = useVote();
   const { showToaster } = useToaster();
 
+  const onSubmit = (values) => {
+    addNewLink(values);
+    showToaster(`"${values.name}" added.`);
+    goHomePage();
+  };
+
   const formik = useFormik({
     initialValues: {
       name: '',
       uri: '',
     },
     validationSchema: newItemSchema,
-    onSubmit: (values) => {
-      addNewLink(values);
-      showToaster(`"${values.name}" added.`);
-      goHomePage();
-    },
+    onSubmit,
   });
 
   return (
